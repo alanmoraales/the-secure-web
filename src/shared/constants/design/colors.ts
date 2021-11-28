@@ -7,6 +7,7 @@ const colors = {
   spanishGray: '#949494',
   jet: '#3A3A3A',
   eerieBlack: '#1D1D1D',
+  firebrick: '#A61A1A',
 }
 
 export { colors }

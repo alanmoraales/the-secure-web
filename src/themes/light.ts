@@ -11,6 +11,7 @@ const {
   spanishGray,
   jet,
   eerieBlack,
+  firebrick,
 } = colors
 
 const light = extendTheme({
@@ -20,7 +21,7 @@ const light = extendTheme({
     glass: `rgba(${culturedRGB}, 0.8)`,
     primary: {
       light: vividViolet,
-      normal: blueViolet,
+      normal: firebrick,
       dark: russianViolet,
     },
     neutral: {
