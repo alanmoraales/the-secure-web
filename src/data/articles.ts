@@ -3,66 +3,51 @@ import { IArticle, EArticleType } from '@declarations/article'
 const articles: IArticle[] = [
   {
     title: 'Programación de aplicaciones con sockets',
-    coverUrl: 'https://i.ibb.co/56GLc9n/IMG-20200704-195213-1.jpg',
+    coverUrl:
+      'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
     type: EArticleType.Post,
     description:
-      'People is divided in two pieces, the infinite and the finite. In this article I introduce the philosophy of balancing the infinite and how it can help you have a better life.',
-    slug: '/posts/infinity',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    slug: '/posts/socket-programming',
     date: 'Diciembre 1, 2021',
-    photosCount: 1,
     coverWidth: 1222,
     coverHeight: 687,
-    keywords:
-      'balance, infinite, finite, alanmoraales, philosophy, balance the infinite',
-    socialMediaCoverUrl: 'https://i.ibb.co/25Bz9c5/infinity-banner.jpg',
   },
   {
     title: 'Seguridad en la comunicación de datos en una red',
-    coverUrl: 'https://i.ibb.co/mTX0w0T/IMG-20201026-172930-1920.jpg',
+    coverUrl:
+      'https://images.unsplash.com/photo-1573164713712-03790a178651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
     type: EArticleType.Post,
     description:
-      'Life, like a day, has a morning and an evening. In this article I want to introduce you The Two Halves Of Life and how this applies to the creative journey.',
-    slug: '/posts/starting-the-journey',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    slug: '/posts/data-security',
     date: 'Diciembre 1, 2021',
-    photosCount: 1,
     coverWidth: 1920,
     coverHeight: 1352,
-    keywords:
-      'The Two Halves Of Life, creative, journey, alanmoraales, philosophy',
-    socialMediaCoverUrl:
-      'https://i.ibb.co/0nHvPr7/Posts-Starting-The-Journey.jpg',
   },
   {
     title: 'Seguridad en la web',
-    coverUrl: 'https://i.ibb.co/mTX0w0T/IMG-20201026-172930-1920.jpg',
+    coverUrl:
+      'https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
     type: EArticleType.Post,
     description:
-      'Life, like a day, has a morning and an evening. In this article I want to introduce you The Two Halves Of Life and how this applies to the creative journey.',
-    slug: '/posts/starting-the-journey',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    slug: '/posts/web-security',
     date: 'Diciembre 1, 2021',
-    photosCount: 1,
     coverWidth: 1920,
     coverHeight: 1352,
-    keywords:
-      'The Two Halves Of Life, creative, journey, alanmoraales, philosophy',
-    socialMediaCoverUrl:
-      'https://i.ibb.co/0nHvPr7/Posts-Starting-The-Journey.jpg',
   },
   {
     title: 'Internet de las cosas',
-    coverUrl: 'https://i.ibb.co/mTX0w0T/IMG-20201026-172930-1920.jpg',
+    coverUrl:
+      'https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
     type: EArticleType.Post,
     description:
-      'Life, like a day, has a morning and an evening. In this article I want to introduce you The Two Halves Of Life and how this applies to the creative journey.',
-    slug: '/posts/starting-the-journey',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    slug: '/posts/internet-of-things',
     date: 'Diciembre 1, 2021',
-    photosCount: 1,
     coverWidth: 1920,
     coverHeight: 1352,
-    keywords:
-      'The Two Halves Of Life, creative, journey, alanmoraales, philosophy',
-    socialMediaCoverUrl:
-      'https://i.ibb.co/0nHvPr7/Posts-Starting-The-Journey.jpg',
   },
 ]
 
