@@ -2,11 +2,10 @@ import { Grid } from '@chakra-ui/react'
 import PageTemplate from '@templates/PageTemplate'
 import LatestContentSection from '@organisms/LatestContentSection'
 import Head from '@atoms/Head'
-import seoMetadata from 'data/seoMetadata'
 
 const Home = () => (
   <>
-    <Head seoMetadata={seoMetadata.home} />
+    <Head />
     <PageTemplate>
       <Grid
         w="100%"

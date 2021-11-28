@@ -2,46 +2,28 @@ import { FC } from 'react'
 import { Box, SlideFade } from '@chakra-ui/react'
 import Head from '@atoms/Head'
 import { ArticleHeader } from '@molecules/Article'
-import { GetEnumKeys, getArticleUrl } from 'utils/common'
+import { GetEnumKeys } from 'utils/common'
 import { EArticleType } from '@declarations/article'
 
 interface IArticleLayout {
   title: string
   type?: GetEnumKeys<typeof EArticleType>
   date: string
-  description: string
-  socialMediaCoverUrl: string
-  slug: string
-  keywords: string
 }
 
 const ArticleLayout: FC<IArticleLayout> = ({
   children,
   title,
-  description,
-  socialMediaCoverUrl,
-  slug,
-  keywords,
   ...headerProps
 }) => {
   const pageTitle = `${title} | The Photography Journey`
-  const articleUrl = getArticleUrl(slug)
 
   return (
     <>
-      <Head
-        title={pageTitle}
-        seoMetadata={{
-          description,
-          keywords,
-          ogTitle: pageTitle,
-          ogImageSrc: socialMediaCoverUrl,
-          ogUrl: articleUrl,
-        }}
-      />
+      <Head title={pageTitle} />
       <SlideFade in>
         <Box pt={16}>
-          <ArticleHeader title={title} {...headerProps} url={articleUrl} />
+          <ArticleHeader title={title} {...headerProps} />
           <Box
             sx={{
               margin: '0 auto',

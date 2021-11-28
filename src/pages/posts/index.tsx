@@ -5,14 +5,10 @@ import PageTemplate from '@templates/PageTemplate'
 import ArticleCard from '@molecules/ArticleCard'
 import Head from '@atoms/Head'
 import articles from 'data/articles'
-import seoMetadata from 'data/seoMetadata'
 
 const Posts = () => (
   <>
-    <Head
-      title="Posts | The Photography Journey"
-      seoMetadata={seoMetadata.posts}
-    />
+    <Head title="Posts | The Photography Journey" />
     <PageTemplate>
       <Grid
         w="100%"
