@@ -9,7 +9,7 @@ import articles from 'data/articles'
 const { posts } = routes
 
 const LatestContentSection = () => (
-  <Section title="Latest content" seeAllUrl={posts}>
+  <Section title="Contenido reciente">
     {articles.slice(0, 6).map((article, index) => (
       <Fragment key={article.slug}>
         <ArticleCard {...article} />
