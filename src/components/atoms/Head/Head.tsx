@@ -2,8 +2,8 @@ import { FC } from 'react'
 import NextHead from 'next/head'
 import { ISeoMetadata } from '@declarations/common'
 
-const defaultTitle = 'The Photography Journey | alanmoraales'
-const siteName = 'The Photography Journey'
+const defaultTitle = 'The Secure Web'
+const siteName = 'The Secure Web'
 
 interface HeadProps {
   title?: string
