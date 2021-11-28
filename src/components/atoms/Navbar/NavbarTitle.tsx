@@ -11,7 +11,7 @@ const NavbarTitle = () => (
     <a>
       <Flex gap={4}>
         <Logo boxSize={25} />
-        <Heading variant="h5">The Photography Journey</Heading>
+        <Heading variant="h5">The Secure Web</Heading>
       </Flex>
     </a>
   </Link>
