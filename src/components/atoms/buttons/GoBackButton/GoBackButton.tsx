@@ -13,7 +13,7 @@ const onGoBack = () => {
   router.back()
 }
 
-const GoBackButton = ({ href = '#', label = 'Go back' }: IGoBackButton) => (
+const GoBackButton = ({ href = '#', label = 'Regresar' }: IGoBackButton) => (
   <Link onClick={onGoBack}>
     <Flex
       gap={2}

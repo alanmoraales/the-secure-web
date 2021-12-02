@@ -1,0 +1,48 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/https-introduction')
+
+Cuando Tim Berners-lee creó la web en 1990, su intención original era compartir
+información de manera automática entre científicos y universidades de todo el mundo.
+Sin embargo, con el paso de los años hemos visto surgir grandes empresas como Meta
+(Antes Facebook), Amazon y Google construir sus productos basados en la web, causando
+que información sensible de sus usuario se encuentre viajando en el internet.
+
+Por mucho tiempo esto fue un problema, pues el protocolo original HTTP no era lo
+suficientemente seguro para mantener la información de las personas segura, pues
+los atacantes podían fácilmente realizar ataques del tipo man-in-the-middle.
+
+![facebook con http](https://imagenes.elpais.com/resizer/vB-V4xtWAc-YzdNB60WJvZgKdOA=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SWSP5IZFG4E5IXOYEIDHX242UQ.jpg)
+
+En 2016, Electronic Frontier Foundation en conjunto con la comunidad de
+desarrolladores, promovieron una campaña con la finalidad de establecer
+el protocolo HTTPS como un estándar, pues hasta ese momento obtener una
+certificación SSL necesaria para crear una conexión HTTPS era sumamente
+cara e inviable para pequeñas empresas. Hoy día, el protocolo HTTPS es más
+utilizado en internet que el protocolo original HTTP.
+
+#### Qué es HTTPS
+
+HTTPS (hypertext transfer protocol secure) es una extensión del
+protocolo HTTP, en el cual la comunicación es encriptada utilizando
+un TSL (transport layer security) o mejor conocido como SSL (secure sockets layer).
+
+Para crear una conexión HTTPS, se necesita una serie de certificados digitales en el servidor
+que estén firmados por un tercero.
+
+#### Cómo obtener los certificados
+
+Cómo fruto del movimiento iniciado en 2016, se lanzó Let’s Encrypt, quien
+provee certificados SSL básicos que son gratuitos y automatizados.
+Gracias a Let’s Encrypt la mayoría de los proveedores de hosts y servicios en
+la nube ofrecen certificados gratuitos a sus clientes.
+
+![Let's Encrypt](https://www.muylinux.com/wp-content/uploads/2018/02/letsencrypt.png)
+
+Si deseas o necesitas obtener certificados más avanzados, debes acudir a una autoridad
+de certificación (CA) los cuales ofrecen certificaciones pagadas de varios tipos.
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

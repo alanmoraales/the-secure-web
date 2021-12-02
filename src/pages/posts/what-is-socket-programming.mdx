@@ -1,0 +1,81 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/what-is-socket-programming')
+
+Similar a la comunicación humana, las aplicaciones requieren una serie de
+participantes para poder llevar a cabo la comunicación: Un emisor, un receptor,
+un tema de conversación y un medio por el cual puedan comunicarse.
+Adicionalmente, hoy en día los programas pueden comunicarse independientemente
+del lenguaje en el que son programados, puede realizarlo cuando se perciben locales
+y por medio de internet cuando se perciben remotos.
+Esto es posible gracias a la implementación de elementos conocidos como Sockets.
+
+#### ¿Qué es un Socket?
+
+Desde un punto de vista funcional, los Sockets pueden definirse como puntos
+terminales a los cuales los 2 programas pueden enlazarse. Estas terminales
+permiten a los programas emitir información y recibirla, incluso si estos se
+perciben remotos. Funcionan como un enlace de comunicación que es bidireccional,
+lo que quiere decir que comunica al receptor para que pueda emitir una respuesta.
+Un Socket puede entenderse como un endpoint (punto final) para la comunicación.
+
+#### ¿Cómo es la arquitectura de su conexión?
+
+Para hablar de su arquitectura destacamos a los 2 principales participantes:
+El servidor y el cliente, aunque se hace distinción entre el emisor y el receptor,
+estos 2 elementos son Sockets, pero con configuraciones y fines distintos.
+El servidor es un servicio que se encuentra en ejecución continua y se mantiene
+esperando hasta que algún otro desee conectarse a él. Debido a esto, el servidor
+no es el elemento que da el primer paso o inicia la conexión, más bien es aquel que
+provee información a quien lo necesite. El cliente es el programa que inicia el proceso
+de conexión con el servidor, al momento en el que este es ejecutado se enlaza con el
+servidor al solicitarle información.
+Estos 2 elementos de la arquitectura de Sockets son los que toman el papel de
+emisor y receptor, siento el emisor el cliente y el servidor el receptor que
+responde a la petición del emisor.
+
+![sistema de sockets](https://marialopezweb.files.wordpress.com/2016/01/sockets.png)
+
+#### Establecer comunicación entre Sockets.
+
+##### Del lado del servidor
+
+1. El programa servidor realiza la apertura del Socket.
+2. Notifica al sistema operativo de la apertura del Socket y le avisa que
+   queremos que asocie nuestro programa a dicho Socket.
+3. Le pide al sistema operativo que inicie el proceso de escuchar en ese
+   puerto y de pasarnos las peticiones entrantes, si las peticiones son más de
+   lo que podemos atender, el SO genera una cola.
+4. Se le avisa al SO que estamos listos para atender la siguiente (o la primera) solicitud.
+5. Utilizar un método de lectura para conocer la petición y otro de escritura para responder.
+6. Se cierra la comunicación con el Socket emisor y repetimos desde el paso 2.
+
+##### Del lado del cliente
+
+Este Socket se enlaza con el Socket servidor objetivo por medio de su dirección IP y
+su número de puerto.
+
+1. Se realiza la apertura del Socket.
+2. Se solicita la conexión al Socket servidor, en este punto nuestro Socket
+   se “bloquea” hasta que sea aceptado o rechazado.
+3. Una vez aceptado, se procede a la escritura de la solicitud y después a
+   la lectura de la respuesta de dicha solicitud.
+4. Se cierra la conexión.
+
+Para entender de mejor forma este proceso se recomienda ver el siguiente video
+donde se realiza la comunicación de Sockets en java, desde el localhost:
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/3wJTI9LMOsk"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

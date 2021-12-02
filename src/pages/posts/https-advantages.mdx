@@ -1,0 +1,74 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/https-advantages')
+
+Aunque la mayoría de sitios web actuales utilizan HTTPS, aún hay algunos
+que se encuentran rezagados o creen que no necesitan HTTPS porque no manejan
+información sensible de los usuarios. Si eres uno de esos casos, o estás por
+publicar una web y no sabes si utilizar HTTPS, aquí te compartimos las ventajas
+por las cuales deberías de utilizar HTTPS.
+
+#### Genera confianza en tus usuarios
+
+Hoy día los navegadores de internet más importantes utilizan HTTPS como una
+medida de calidad y seguridad, y esto se ha visto reflejado en las
+interfaces de los navegadores y el feedback que estos proveen a sus usuarios.
+
+Poniendo de ejemplo a Google Chrome, este navegador muestra un icono de candado
+en los sitios que utilizan HTTPS y una leyenda “No seguro” acentuada en color
+rojo en los sitios que aún utilizan HTTP.
+
+Este pequeño detalle es muy importante, pues usuarios potenciales de tu
+sitios podrían sentir desconfianza y salir inmediatamente para buscar un sitio alternativo.
+
+![Mensaje de HTTPS y HTTP en navegadores](https://www.awts.com/wp-content/uploads/2017/11/HTTP-vs-HTTPS.png)
+
+#### Evita intrusos en tu sitio
+
+Como mencionamos antes, una de las razones más comunes por la que las que se decide no utilizar
+HTTPS es que solo necesitas HTTPS si manejas información sensible del usuario.
+
+La realidad es que toda petición hecha por HTTP o HTTPS incluye datos del cliente
+(la computadora del usuario) que puede potencialmente ser utilizado por atacantes
+para obtener la identidad y el comportamiento de tus usuarios.
+
+Otra acción que un atacante podría hacer en tu sitio es romper la integridad
+del mismo, agregando anuncios, contenido no deseado o incluso código malicioso
+para intentar robar la información de tus usuarios.
+
+#### Tienes acceso a funciones exclusivas del navegador
+
+Una de las tendencias de la web actual son las llamadas aplicaciones web progresivas
+(PWA), la idea es que una aplicación web pueda ser lo más similar posible a una
+aplicación nativa (por ejemplo, una aplicación creada para Android) que pueda
+utilizar las capacidades de los dispositivos.
+
+![Ejemplo de PWA de Pinterest](https://i.blogs.es/73af85/pwa-portada/1366_2000.png)
+
+Para lograr esto, los navegadores más importantes proveen funcionalidades
+que permiten a las aplicaciones web acceder y utilizar las distintas
+capacidades de los dispositivos. Sin embargo, estás funciones solo pueden
+usarse si la aplicación web cuenta con una conexión HTTPS.
+
+Algunas capacidades a las que se puede acceder a través de estas funciones del navegador son:
+
+- Bluetooth
+- Cámara
+- Micrófono
+- Notificaciones
+- Geolocalización
+- Service workers
+- Instalación como app
+
+Esta lista se actualiza constantemente, por lo que si actualmente cuentas con
+un sitio con HTTP, es probable que pierdas algunas funciones de tu página.
+A continuación una lista de funciones que próximamente estarán disponibles solo para HTTPS:
+
+- Movimiento y orientación
+- Pantalla completa
+- Caché
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

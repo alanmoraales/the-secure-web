@@ -14,7 +14,7 @@ const ArticleLayout: FC<IArticleLayout> = ({
   title,
   ...headerProps
 }) => {
-  const pageTitle = `${title} | The Photography Journey`
+  const pageTitle = `${title} | The Secure Web`
 
   return (
     <>
@@ -50,6 +50,7 @@ const ArticleLayout: FC<IArticleLayout> = ({
               '& img': {
                 paddingTop: 6,
                 paddingBottom: 6,
+                width: '100%',
               },
               '& blockquote': {
                 padding: 4,
@@ -67,6 +68,14 @@ const ArticleLayout: FC<IArticleLayout> = ({
               },
               '& a:hover': {
                 color: 'primary.normal',
+              },
+              '& li': {
+                fontSize: 'blogParagraph',
+                color: 'neutral.black.normal',
+                marginLeft: 8,
+              },
+              '& ol, ul': {
+                paddingBottom: 4,
               },
             }}
           >

@@ -1,0 +1,53 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/data-security')
+
+Para que 2 Sockets se puedan comunicar es necesario que sean del mismo tipo,
+de lo contrario es imposible que se comuniquen.
+
+#### Protocolo TCP/IP
+
+También conocido como Socket orientado a conexión o de tipo Stream.
+En este tipo de comunicación toda la información llega en el mismo
+orden con el que salió del emisor. Además, solo es necesario suministrar
+la dirección del dispositivo receptor 1 vez para que la conexión continúe,
+tal y como sucede en una llamada telefónica.
+
+Debido a que usa el protocolo TCP, se garantiza que los datos llegarán
+correctamente al receptor y hay una mayor garantía en la integridad de
+la información. Por lo tanto, este tipo de conexión es utilizada cuando
+la información es importante.
+
+![Proceso de comunicación con TCP/IP](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Tcp-handshake.svg/1024px-Tcp-handshake.svg.png)
+
+#### Protocolo UDP
+
+También conocido como Socket no orientado a conexión o de Datagrama.
+Este tipo de Sockets utilizan el protocolo UDP, por lo que requieren
+conocer la ip de destino cada vez que requieren enviar algo. Dado que
+usa el protocolo UDP, no es de vital importancia la integridad de todos
+los datos, por lo que puede que estos se pierdan o lleguen en otro orden.
+
+En este caso es el programa de aplicación el que brinda la fiabilidad.
+
+![Comunicación con UDP](https://www.profesionalreview.com/wp-content/uploads/2020/02/protocolo-TCP-IP-05.png)
+
+#### Protocolos HTTP, FTP, SMTP, etc.
+
+De momento solo hemos mencionado 2 protocolos de comunicación para el uso de Sockets.
+Sin embargo, no están limitados por estos 2 protocolos ya que también involucran a
+sus derivados. Cuando se dice que los Sockets son la base de internet es precisamente
+por ello. Dado que HTTP y FTP son derivados de TCP (debido al modelo de capas),
+los Sockets son capaces de enlazar aplicaciones y comunicarlas por medio de estos
+protocolos que tienen como objetivo la comunicación utilizando elementos específicos.
+
+Por lo tanto, solicitudes a direcciones web para cargar un sitio web,
+consumir servicios de API´s, mensajería instantánea en línea, operaciones
+bancarias, envío de formularios, etc, tienen como base el uso de Sockets.
+
+![Comunicación por HTTP](https://todosobreredes503.files.wordpress.com/2014/10/img1016.gif)
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)
