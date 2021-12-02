@@ -12,6 +12,7 @@ const articles: IArticle[] = [
     date: 'Diciembre 1, 2021',
     coverWidth: 1222,
     coverHeight: 687,
+    subject: 'Programación con sockets',
   },
   {
     title: 'Seguridad en la comunicación de datos en una red',
@@ -24,6 +25,7 @@ const articles: IArticle[] = [
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1352,
+    subject: 'Seguridad en la comunicación de una red',
   },
   {
     title: 'Seguridad en la web',
@@ -36,6 +38,7 @@ const articles: IArticle[] = [
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1352,
+    subject: 'Seguridad web',
   },
   {
     title: 'Internet de las cosas',
@@ -48,6 +51,7 @@ const articles: IArticle[] = [
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1352,
+    subject: 'Internet de las cosas',
   },
 ]
 

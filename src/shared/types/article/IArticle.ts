@@ -9,6 +9,7 @@ interface IArticle {
   date: string
   coverWidth: number
   coverHeight: number
+  subject: string
 }
 
 export type { IArticle }
