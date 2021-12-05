@@ -42,7 +42,13 @@ class MyDocument extends Document {
 
     return (
       <Html>
-        <Head>{preloadedFonts}</Head>
+        <Head>
+          {preloadedFonts}
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/dracula-prism@2.1.5/dist/css/dracula-prism.css"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
