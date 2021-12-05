@@ -77,6 +77,11 @@ const ArticleLayout: FC<IArticleLayout> = ({
               '& ol, ul': {
                 paddingBottom: 4,
               },
+              '& pre': {
+                fontSize: 'blogParagraph',
+                marginTop: 0,
+                marginBottom: 4,
+              },
             }}
           >
             {children}

@@ -1,0 +1,100 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/secure-sockets')
+
+Dado que la conexión TCP es aquella en la que procuramos por la
+integridad de los datos, hablaremos de la forma en la que podemos
+proteger la integridad de los datos que da como respuesta un servidor
+TCP. En gran parte de las ocasiones se utilizan servidores de este tipo.
+Para ello, revisaremos una serie de buenas prácticas que nos ayudarán a
+mantener la seguridad de nuestra aplicación:
+
+- Manejo de hilos: Los servidores se mantienen a la espera de
+  diversas solicitudes normalmente, no hacen esperar a todas las
+  solicitudes para atenderlas 1 por 1, si no que utiliza hilos para
+  ir resolviendo los de forma simultánea. Esto quiere decir que, si
+  se presenta una gran cantidad de solicitudes, nuestro programa podría
+  “morir” debido a que puede quedarse sin recursos. Como en este ejemplo
+  en lenguaje Ruby:
+
+  ```ruby
+  server = TCPServer.new("", srvport)
+  loop do
+    socket = server.accept
+    if socket
+      newclient(socket)
+    end
+  end
+  ```
+
+  Una de las variadas soluciones que podemos utilizar es generar tiempos
+  de espera entre que se acepta la solicitud y se crea el hilo. De esta forma:
+
+  ```ruby
+  server = TCPServer.new("", srvport)
+  loop do
+    socket = server.accept
+    sleep(0.05)
+    if socket
+      newclient(socket)
+    end
+  end
+  ```
+
+- Controlar el número de solicitudes: Un atacante puede provocar este mismo
+  problema aunque implementemos la solución anterior. ¿Cómo podría? Realizando
+  solicitudes que no hagan nada, simplemente dejen al servidor esperando, de esta
+  forma el hilo no termina y poco a poco la capacidad del servidor va decreciendo.
+  Para solventar este problema podemos usar timeouts por inactividad, de forma que
+  si un usuario no muestra actividad durante X tiempo, se cierre el socket y el hilo
+  muera. Para ello, hice una función alternativa para leer del socket.
+
+  ```ruby
+  def read_socket(s, thread, tout = 15, size = 500)
+    begin
+    Timeout::timeout(tout) do
+      info = s.recv(size)
+      return info
+    end
+    rescue Timeout::Error
+      s.close
+      thread.kill
+      return false
+    end
+  end
+  ```
+
+#### Agregando seguridad adicional a WebSockets.
+
+Es cierto que la web está creciendo y evolucionando cada día
+más rápido, y sobre todo lo hacen las aplicaciones que involucran
+a personas. Estas aplicaciones piden tecnologías que, por ejemplo,
+sepan lidiar con la “baja latencia de comunicaciones”, como es el
+caso de los websockets, pero también se incrementa la preocupación
+sobre la seguridad. Como en HTTP(S), el objetivo de WSS (Websockets
+sobre SSL/TLS) es añadir una capa de seguridad sobre tus comunicaciones.
+
+Puedes utilizar, por ejemplo un servidor tipo Nginx para websockets
+de proxy inverso y habilitar SSL, protegiendo así tu sistema de ataques
+de intermediarios, en los que una persona envía mensajes a otros como
+intermediario invisible para tu comunicación.
+
+![http and https](https://irp-cdn.multiscreensite.com/55d07fd3/http-https-candado.png)
+
+Los ataques de denegación de servicio, Denial of Service (DoS),
+son de los más comunes. Son un intento de hacer que la máquina,
+o los recursos de red estén indisponibles para los usuarios que los soliciten.
+
+Por eso, vale la pena implementar “Rate limiting”, e implementar
+así un control para bloquear visitantes sospechosos. El Rate Limiting
+permite configurar umbrales, definir respuestas y obtener información
+específica, o puntos de conexión. De esta manera se puede completar la
+protección DoS, y evitar intentos de sesión por "fuerza bruta" u otros
+comportamientos abusivos.
+
+![rate limit](https://www.cloudflare.com/resources/images/slt3lc6tev37/2gsdcTziAsmnUhQRiwrn5u/0f022b566241195b26d07cab66f6a90b/what_is_rate_limiting_illustration.svg)
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

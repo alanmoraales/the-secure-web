@@ -40,13 +40,26 @@ const articles: IArticle[] = [
     subject: 'Seguridad en la web',
   },
   {
-    title: 'Protocolos de comunicación con Sockets',
+    title: 'Protocolos de comunicación con sockets',
     coverUrl:
       'https://thumbs.dreamstime.com/b/connection-electrical-devices-wiring-sockets-design-construction-two-connected-appliances-double-socket-147257126.jpg',
     type: EArticleType.Post,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     slug: '/posts/sockets-protocols',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Programación con sockets',
+  },
+  {
+    title: 'Programación segura de sockets y amenazas',
+    coverUrl:
+      'https://irp-cdn.multiscreensite.com/55d07fd3/http-https-candado.png',
+    type: EArticleType.Post,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    slug: '/posts/secure-sockets',
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1080,
