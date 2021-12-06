@@ -7,7 +7,7 @@ import articles from 'data/articles'
 
 const LatestContentSection = () => (
   <Section title="Contenido reciente">
-    {articles.slice(0, 6).map((article, index) => (
+    {articles.map((article, index) => (
       <Fragment key={article.slug}>
         <ArticleCard {...article} />
         <When condition={index + 1 !== articles.length}>

@@ -20,7 +20,7 @@ const articles: IArticle[] = [
       'https://d25rq8gxcq0p71.cloudfront.net/dictionary-images/324/480fecae-1c93-4be8-b3cf-1d7e2b98dc96.jpg',
     type: EArticleType.Post,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'La comunicación local y remota entre aplicaciones se da por medio de elementos llamados Sockets, de forma similar a como funciona la comunicación humana. Siguiendo una serie de reglas, un Socket realiza la labor de emisor y otro de receptor.',
     slug: '/posts/what-is-socket-programming',
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
@@ -45,7 +45,7 @@ const articles: IArticle[] = [
       'https://thumbs.dreamstime.com/b/connection-electrical-devices-wiring-sockets-design-construction-two-connected-appliances-double-socket-147257126.jpg',
     type: EArticleType.Post,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'La comunicación entre Sockets ocurre en la capa de transporte de la aplicación, pueden comunicarse usando el protocolo UDP, TCP o variantes de estos dos protocolos que agregan seguridad o definen la forma de comunicar información específica.',
     slug: '/posts/sockets-protocols',
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
@@ -58,12 +58,25 @@ const articles: IArticle[] = [
       'https://irp-cdn.multiscreensite.com/55d07fd3/http-https-candado.png',
     type: EArticleType.Post,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Como muchas otras tecnologías, los Sockets no están exentos a ataques y vulnerabilidades. Por lo tanto, es importante conocer las principales amenazas que los atacantes pueden aprovechar y saber contrarrestarlas.',
     slug: '/posts/secure-sockets',
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1080,
     subject: 'Programación con sockets',
+  },
+  {
+    title: 'Todo sobre SSL',
+    coverUrl:
+      'https://lh6.googleusercontent.com/VAdBj3tMi9dgEMRput8m5kPoEh3Ky_KWgSpd-Vv0RrkLY5cdXUFa4zTQE8hpizKkg76y0H7bWsfWW3EjGjzoQRNIgemgmIoI8FmoR87b9aybYpYm3sJMB2wpeIjRUPp6ZS6OsRR0',
+    type: EArticleType.Post,
+    description:
+      'Muchos no lo saben, pero SSL es un protocolo que hoy día se encuentra obsoleto. En este blog te presentamos al TLS, sucesor de SSL.',
+    slug: '/posts/everything-about-ssl',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Seguridad en la web',
   },
   {
     title: 'Seguridad en la comunicación de datos en una red',

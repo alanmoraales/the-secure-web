@@ -1,0 +1,79 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/everything-about-ssl')
+
+Secure Sockets Layer (SSL) es un protocolo de seguridad creado por Netscape
+en 1995 con la finalidad de garantizar la privacidad, la autenticación y
+la integridad de los datos en las comunicaciones de internet.
+
+Actualmente, el protocolo SSL se encuentra obsoleto. Sin embargo,
+su nombre sigue siendo muy común, ya que muchas empresas de hosting
+venden certificados como “SSL” aunque estos en realidad están basados
+en el protocolo TLS (Transport Layer Security).
+
+#### ¿SSL o TLS?
+
+En pocas palabras, TLS es el sucesor de SSL. En 1999,
+el grupo de trabajo de ingeniería de internet (IETF)
+propuso una actualización del SSL. Dado que IETF desarrolló
+esta actualización y Netscape ya no se encontraba participando
+en el proyecto, se decidió cambiar el nombre a TLS, convirtiéndose
+esta en la primera versión y dejando a SSL con la versión 3.0 como
+su final. La versión más actual de TLS es la 1.3 lanzada en 2018.
+
+En la siguiente imagen podemos observar las distintas versiones de SSL
+y TLS, y los años en que algunas se convirtieron en obsoletas, es decir,
+que dejaron de considerarse seguras.
+
+![Historia de SSL](https://lh6.googleusercontent.com/VAdBj3tMi9dgEMRput8m5kPoEh3Ky_KWgSpd-Vv0RrkLY5cdXUFa4zTQE8hpizKkg76y0H7bWsfWW3EjGjzoQRNIgemgmIoI8FmoR87b9aybYpYm3sJMB2wpeIjRUPp6ZS6OsRR0)
+
+La versión 1.3 de TLS incluyó varios cambios importantes,
+como el requisito de utilizar Perfect Forward Ciphers.
+A continuación, te dejamos un video con toda la información sobre esta
+versión de TLS.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/VzWqnT5dErI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+#### Tipos de certificados “SSL”
+
+Existen diferentes tipos de certificados SSL (TLS en realidad),
+es sí, estos se pueden clasificar por el número de dominios al que se
+pueden aplicar, y el nivel de validación que recibe.
+
+##### Según el número de dominios:
+
+- Un solo dominio: El certificado solo sirve para un dominio.
+  Por ejemplo: www.the-secure-web.com
+- Comodín: Este certificado puede aplicarse a un solo dominio,
+  y los subdominios de ese dominio. Por ejemplo: www.the-secure-web.com,
+  blog.the-secure-web.com.
+- Multidominio: Se puede utilizar en varios dominios no relacionados entre sí.
+
+##### Según su nivel de validación:
+
+- Validación del dominio: Es el menos estricto y el más barato.
+  Solo requiere probar que se tiene control sobre el dominio.
+- Validación de la organización: Es un proceso más práctico.
+  La AC se pone en contacto con la persona o empresa que solicita el certificado.
+- Validación extendida: Requiere una comprobación completa de los
+  antecedentes de una organización.
+
+![niveles de validación](https://valenciatech.com/wp-content/uploads/2018/06/ssl-certificates-types.jpg)
+
+#### Referencias
+
+- [¿Qué es el SSL?](https://www.cloudflare.com/es-es/learning/ssl/what-is-ssl/)
+- [What is SSL?](https://www.ssl.com/faqs/faq-what-is-ssl/)
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)
