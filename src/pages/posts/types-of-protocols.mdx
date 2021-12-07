@@ -1,0 +1,101 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/types-of-protocols')
+
+Los protocolos de red incluyen mecanismos para que los dispositivos se
+identifiquen y establezcan conexiones entre sí, así como reglas de formato
+que especifican cómo se forman los paquetes y los datos en los mensajes
+enviados y recibidos. Algunos protocolos admiten el reconocimiento de
+mensajes y la compresión de datos diseñados para la comunicación.
+
+Los protocolos para la transmisión de datos en internet más importantes son:
+
+- TCP (Protocolo de Control de Transmisión)
+
+- IP (Protocolo de Internet). De manera conjunta (TCP/IP)
+
+![TCP/IP](https://sites.google.com/site/redesinformaticasjh/_/rsrc/1459033312745/tcp-transmision-control-protocol/image003.jpg?height=242&width=320)
+
+Podemos mencionar a los dispositivos que acceden a la red,
+como los protocolos de comunicación asociados a internet.
+
+- POP
+- SMTP
+- HTTP
+
+Estos los utilizamos prácticamente todos los días, aunque la mayoría
+de los usuarios no lo sepan ni conozcan su funcionamiento.
+
+Estos protocolos permiten la transmisión de datos desde nuestros
+dispositivos para navegar a través de los sitios, enviar correos
+electrónicos, escuchar música online, etc.
+
+Existen varios tipos de protocolos de red:
+
+- Protocolos de comunicación de red: protocolos de comunicación de
+  paquetes básicos como TCP / IP y HTTP.
+
+- Protocolos de seguridad de red: implementan la seguridad en las
+  comunicaciones de red entre servidores, incluye HTTPS, SSL y SFTP.
+
+- Protocolos de gestión de red: proporcionan mantenimiento y gobierno
+  de red, incluyen SNMP e ICMP.
+
+El modelo OSI (Open System Interconnection) organiza conceptualmente
+a las familias de protocolos de red en capas de red específicas.
+Este Sistema de Interconexión Abierto tiene por objetivo establecer
+un contexto en el cual basar las arquitecturas de comunicación entre
+diferentes sistemas.
+
+![La pila](/images/1.png)
+
+#### ¿Existe una IP segura?
+
+La norma IPsec se utiliza normalmente para establecer una VPN IPSec a
+través de Internet entre terminales fijos y también para crear una
+conexión cliente-servidor VPN cifrada entre dispositivos remotos y
+una red fija. Las VPN IPsec han sido sustituidas en gran medida por
+lasVPN SSL, como la VPN SSL FirePass de F5, porque refuerzan la
+seguridad de los terminales, no requieren ninguna configuración
+en la máquina remota y aplican la seguridad en la capa de aplicación
+en lugar de en la capa de red. La seguridad en la capa de aplicación
+soluciona los típicos fallos de configuración e implementación IPsec,
+que por diseño refuerza la seguridad en la capa de red y se limita
+funcionalmente al uso en redes conocidas y controladas.
+
+#### ¿VPN? ¿Qué es eso?
+
+Una VPN crea una conexión segura entre usted e Internet.
+Cuando se conecta a Internet a través de una VPN, todos sus
+datos se envían a través de un túnel virtual encriptado.
+Esto tiene múltiples ventajas:
+
+- Serás más anónimo en Internet: tu dirección IP y tu ubicación
+  ya no serán visibles para nadie más.
+
+- Estará más seguro en Internet: el túnel cifrado mantendrá alejados
+  a los piratas informáticos y los ciberdelincuentes, y su dispositivo
+  no será vulnerable a los ataques.
+
+- Tendrá más libertad en Internet: utilizando diferentes direcciones
+  IP, podrá acceder a sitios web y servicios en línea que de otro modo
+  estarían bloqueados.
+
+Una VPN ofrece seguridad porque cifra en gran medida todo
+tu tráfico de Internet, incluso antes de que llegue al servidor
+de la VPN. También guía el tráfico de datos a través de un «túnel VPN»
+mucho más seguro. Esto hace que sea mucho más difícil para otros, como
+gobiernos y hackers, interceptar y ver tus datos.
+
+Además, es especialmente importante al usar una VPN cuando se usan
+(peligrosas) redes Wi-Fi públicas.
+
+En casa o en el trabajo también puede ser igualmente de ayuda el
+uso de una VPN. Proveedores como NordVPN o ExpressVPN ofrecen
+los máximos niveles de cifrado AES 256. Con esta clase de protección,
+no tendrás que preocuparte de que alguien recolecte tus datos y los use en contra tuyo.
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

@@ -117,13 +117,38 @@ const articles: IArticle[] = [
     subject: 'Internet de las cosas',
   },
   {
-    title: 'Seguridad en la comunicación de datos en una red',
+    title: 'Tipos de protocolos de red',
+    coverUrl: '/images/1.png',
+    type: EArticleType.Post,
+    description:
+      'Los protocolos de internet son los procesos que se utilizan para establecer las conexiones y envíar los datos necesarios para la comunicación. Este artículo te enseñará los tradicional de los protocolos de red, así como la seguridad en la comunicación de los mismos VPN e IPsec.',
+    slug: '/posts/types-of-protocols',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Seguridad en la comunicación de una red',
+  },
+  {
+    title: 'Seguridad de datos: En qué consiste',
+    coverUrl:
+      'https://antiun.com/wp-content/uploads/2019/05/tipos-encriptacion-de-datos.png',
+    type: EArticleType.Post,
+    description:
+      'La seguridad de datos se refiere a medidas de protección de la privacidad digital que se aplican para evitar el acceso no autorizado a los datos, los cuales pueden encontrarse en ordenadores, bases de datos, sitios web, etc. La seguridad de datos también protege los datos de una posible corrupción.',
+    slug: '/posts/what-is-data-security',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Seguridad en la comunicación de una red',
+  },
+  {
+    title: '¿Cómo proteger mi sitio web?',
     coverUrl:
       'https://images.unsplash.com/photo-1573164713712-03790a178651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
     type: EArticleType.Post,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    slug: '/posts/data-security',
+      'La Seguridad web requiere de vigilancia en todos los aspectos del diseño y uso de un sitio web. Este artículo te ayudará a entender de dónde vienen las amenazas y qué puedes hacer para fortalecer tu aplicación web contra los ataques más comunes.',
+    slug: '/posts/how-to-protect-my-site',
     date: 'Diciembre 1, 2021',
     coverWidth: 1920,
     coverHeight: 1080,

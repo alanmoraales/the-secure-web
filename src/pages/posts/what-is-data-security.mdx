@@ -1,0 +1,121 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/what-is-data-security')
+
+La seguridad de datos es un tema de suma importancia
+que nos afecta a casi todos nosotros. Cada vez son más
+los productos tecnológicos que de una u otra forma deben
+ser tenidos en cuenta para temas de seguridad y que se están
+introduciendo en nuestra vida cotidiana, desde smartwatches
+hasta vehículos sin conductor.
+
+Ya ha llegado la era del Internet de las Cosas (IoT) y, por
+supuesto, de los hacks relacionados con IoT. Todos estos
+dispositivos conectados crean nuevas “conversaciones” entre
+dispositivos, interfaces, infraestructuras privadas y la nube,
+lo que a su vez crea más oportunidades para que los hackers
+puedan escuchar. Todo esto ha impulsado una demanda de soluciones
+y expertos en seguridad de datos que sean capaces de construir
+redes más fuertes y menos vulnerables.
+
+Tendencias recientes han demostrado que los ataques de
+ransomware están aumentando en frecuencia y en gravedad.
+Se ha convertido en un negocio en auge para ladrones
+cibernéticos y hackers, que acceden a la red y secuestran
+datos y sistemas. En los últimos meses, grandes empresas y
+otras organizaciones, así como también usuarios particulares,
+han caído víctimas de este tipo de ataques y han tenido que pagar
+el rescate o correr el riesgo de perder datos importantes.
+
+Entonces, ¿qué conceptos deberíamos conocer que puedan ayudarnos a
+proteger nuestra red y prevenir esta nueva ola de ataques cibernéticos modernos?
+
+#### Ingeniería de la seguridad de datos
+
+Pensar en seguridad de datos y construir defensas desde el
+primer momento es de vital importancia. Los ingenieros de
+seguridad tienen como objetivo proteger la red de las amenazas
+desde su inicio hasta que son confiables y seguras. Los ingenieros
+de seguridad diseñan sistemas que protegen las cosas correctas de
+la manera correcta. Si el objetivo de un ingeniero de software es
+asegurar que las cosas sucedan, el objetivo del ingeniero de
+seguridad es asegurar que las cosas (malas) no sucedan diseñando,
+implementando y probando sistemas completos y seguros.
+
+La ingeniería de seguridad cubre mucho terreno e incluye muchas
+medidas, desde pruebas de seguridad y revisiones de código regulares
+hasta la creación de arquitecturas de seguridad y modelos de amenazas
+para mantener una red bloqueada y segura.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/LTQKwnR4vdU"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+#### Encriptación
+
+![Encriptación](https://antiun.com/wp-content/uploads/2019/05/tipos-encriptacion-de-datos.png)
+
+Si la ingeniería de seguridad de datos protege la red y
+otros activos físicos como servidores, computadoras y bases de
+datos, la encriptación protege los datos y archivos reales
+almacenados en ellos o que viajan entre ellos a través de Internet.
+Las estrategias de encriptación son cruciales para cualquier empresa
+que utilice la nube y son una excelente manera de proteger los discos
+duros, los datos y los archivos que se encuentran en tránsito a través
+de correo electrónico, en navegadores o en camino hacia la nube.
+
+En el caso de que los datos sean interceptados, la encriptación
+dificulta que los hackers hagan algo con ellos. Esto se debe a que
+los datos encriptados son ilegibles para usuarios no autorizados sin
+la clave de encriptación. La encriptación no se debe dejar para el
+final, y debe ser cuidadosamente integrada en la red y el flujo de
+trabajo existente para que sea más exitosa.
+
+#### Detección de intrusión y respuesta ante una brecha de seguridad
+
+Si en la red ocurren acciones de aspecto sospechoso, como
+alguien o algo que intenta entrar, la detección de intrusos
+se activará. Los sistemas de detección de intrusos de red
+(NIDS) supervisan de forma continua y pasiva el tráfico de
+la red en busca de un comportamiento que parezca ilícito o
+anómalo y lo marcan para su revisión. Los NIDS no sólo bloquean
+ese tráfico, sino que también recopilan información sobre él y
+alertan a los administradores de red.
+
+Pero a pesar de todo esto, las brechas de seguridad siguen
+ocurriendo. Es por eso que es importante tener un plan de
+respuesta a una violación de datos. Hay que estar preparado
+para entrar en acción con un sistema eficaz. Ese sistema se
+puede actualizar con la frecuencia que se necesite, por ejemplo
+si hay cambios en los componentes de la red o surgen nuevas
+amenazas que deban abordarse. Un sistema sólido contra una
+violación garantizará que tienes los recursos preparados y
+que es fácil seguir un conjunto de instrucciones para sellar
+la violación y todo lo que conlleva, ya sea que necesites recibir
+asistencia legal, tener pólizas de seguro, o notificar a cualquier
+socio de la cuestión.
+
+#### Firewall
+
+![Firewall](https://antiun.com/wp-content/uploads/2019/07/firewall-funcionamiento.png)
+
+¿Cómo mantener a visitantes no deseados y software
+malicioso fuera de la red? Cuando estás conectado a Internet,
+una buena manera de asegurarse de que sólo las personas y
+archivos adecuados están recibiendo nuestros datos es mediante
+firewalls: software o hardware diseñado con un conjunto de reglas
+para bloquear el acceso a la red de usuarios no autorizados. Son
+excelentes líneas de defensa para evitar la interceptación de datos y
+bloquear el malware que intenta entrar en la red, y también evitan que
+la información importante salga, como contraseñas o datos confidenciales.
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

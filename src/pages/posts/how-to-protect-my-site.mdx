@@ -1,0 +1,93 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/how-to-protect-my-site')
+
+Con mucha frecuencia escuchamos sobre sitios web que
+dejan de estar disponibles debido a ataques de denegación
+de servicio, o presentan información modificada en sus páginas de inicio.
+
+En otros casos de alto nivel, millones de contraseñas,
+direcciones de correo electrónico y detalles de tarjetas
+de crédito han sido filtrados al dominio público, exponiendo
+a los usuarios del sitio web tanto a bochorno personal como a
+riesgo financiero.
+
+El propósito de la seguridad web es prevenir ataques de esta
+(o de cualquier otra) clase. Más formalmente, la seguridad es la
+acción/práctica de proteger sitios web del acceso, uso, modificación,
+destrucción o interrupción, no autorizados.
+
+La seguridad de sitios web eficaz requiere de esfuerzos de diseño a
+lo largo de la totalidad del sitio web: en tu aplicación web, en
+la configuración del servidor web, en tus políticas para crear y
+renovar contraseñas, y en el código del lado cliente. Al mismo
+tiempo que todo esto suena muy inquietante, la buena noticia es
+que si estás usando un framework web de lado servidor, es casi
+seguro que habilitará por defecto mecanismos de defensa robustos
+y bien pensados contra gran cantidad de los ataques más comunes.
+Otros ataques pueden mitigarse por medio de la configuración de
+tu servidor web, por ejemplo habilitando HTTPS. Finalmente, hay
+herramientas de escaneado de vulnerabilidades disponibles públicamente
+que pueden ayudarte a averiguar si has cometido algún error obvio.
+
+- Si bien los datos POST o GET son las fuentes más comunes
+  de vulnerabilidades, cualquier dato del explorador es
+  vulnerable potencialmente (incluyendo los datos de cookies
+  renderizados por el explorador, o los ficheros de los usuarios
+  que éste sube o que se muestran).
+
+![Solicitud a SQL](https://i.ytimg.com/vi/4A11IcRfs0Y/maxresdefault.jpg)
+
+La mejor defensa contra las vulnerabilidades XSS es eliminar o
+deshabilitar cualquier etiqueta que pueda contener instrucciones
+para ejecutar código. En el caso del HTML ésto incluye etiquetas
+como `<script>`, `<object>`, `<embed>`, y `<link>`.
+
+#### Inyección SQL
+
+![Inyección SQL](https://academy.avast.com/hs-fs/hubfs/New_Avast_Academy/SQL%20injection/What%20is%20a%20SQL%20injection.png?width=660&name=What%20is%20a%20SQL%20injection.png)
+
+Las vulnerabilidades de Inyección SQL habilitan que usuarios
+maliciosos ejecuten código SQL arbitrario en una base de datos,
+permitiendo que se pueda acceder a los datos, se puedan modificar
+o borrar, independientemente de los permisos del usuario. Un ataque
+de inyección con éxito, podría falsificar identidades, crear nuevas
+identidades con derechos de administración, acceder a todos los datos
+en el servidor o destruir/modificar los datos para hacerlos inutilizables.
+
+Esta vulnerabilidad está presente si la entrada del usuario que se
+pasa a la sentencia SQL subyacente puede cambiar el significado de
+la misma. Por ejemplo, considera el código de abajo, que pretende
+istar todos los usuarios con un nombre en particular (userName)
+que ha sido suministrado en un formulario HTML
+
+```python
+statement = "SELECT * FROM users WHERE name = '" + userName + "';"
+```
+
+Si el usuario introduce su nombre real, la cosa funciona
+como se pretende. Sin embargo un usuario malicioso podría
+cambiar completamente el comportamiento de esta sentencia
+SQL a la nueva sentencia de abajo, simplemente especificando
+para userName el texto de abajo en "negrilla". La sentencia
+modificada crea una sentencia SQL válida que borra la tabla
+users y selecciona todos los datos de la tabla userinfo
+(revelando la información de todos los usuarios).
+Esto funciona porque la primera parte del texto inyectado (a';)
+completa la sentencia original (' es el símbolo para indicar
+una cadena literal en SQL).
+
+```sql
+SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
+```
+
+La manera de evitar esta clase de ataque es asegurar que
+cualquier dato de usuario que se pasa a un query SQL no
+puede cambiar la naturaleza del mismo. Una forma de hacer
+ésto es que todos los caracteres en la entrada de usuario
+tengan un significado especial en SQL.
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)
