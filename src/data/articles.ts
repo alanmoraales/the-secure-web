@@ -79,6 +79,44 @@ const articles: IArticle[] = [
     subject: 'Seguridad en la web',
   },
   {
+    title: '¿Qué es el internet de las cosas?',
+    coverUrl:
+      'https://paratodopublico.com/wp-content/uploads/2018/09/westnet-internet.jpg',
+    type: EArticleType.Post,
+    description:
+      'Cuando hablamos de internet lo que hacemos es hablar de la red de interconexión entre los diferentes ordenadores en el mundo. Pues bien, el llamado Internet de las cosas no es sino una red de interconexión digital entre dispositivos, personas y la propia Internet que permite el intercambio de datos entre ellos.',
+    slug: '/posts/what-is-internet-of-things',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Internet de las cosas',
+  },
+  {
+    title: '¿Cómo influye el internet de las cosas y por qué se llama así?',
+    coverUrl: 'https://www.muylinux.com/wp-content/uploads/2017/08/IoT.png',
+    type: EArticleType.Post,
+    description:
+      'En nuestra vida cotidiana podemos ver una enorme cantidad de objetos conectados que forman parte del Internet de las cosas, es importante saber cómo influye este fenómeno en nuestra vida cotidiana y sus repercusiones en ella.',
+    slug: '/posts/why-internet-of-things',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Internet de las cosas',
+  },
+  {
+    title: 'Ventajas y desventajas del internet de las cosas',
+    coverUrl:
+      'https://www.lavanguardia.com/files/image_449_253/uploads/2020/12/16/5fd9fe36a5895.png',
+    type: EArticleType.Post,
+    description:
+      'Como todo en la vida, el internet de las cosas tiene sus pros y contras. Su crecimiento cada vez es mayor y ya nos ha conquistado en nuestras casas, elementos cotidianos o incluso en infraestructuras como pueden ser plantas de producción de energía,etc.',
+    slug: '/posts/advantages-and-disadvantages-of-internet-of-things',
+    date: 'Diciembre 1, 2021',
+    coverWidth: 1920,
+    coverHeight: 1080,
+    subject: 'Internet de las cosas',
+  },
+  {
     title: 'Seguridad en la comunicación de datos en una red',
     coverUrl:
       'https://images.unsplash.com/photo-1573164713712-03790a178651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
@@ -90,19 +128,6 @@ const articles: IArticle[] = [
     coverWidth: 1920,
     coverHeight: 1080,
     subject: 'Seguridad en la comunicación de una red',
-  },
-  {
-    title: 'Internet de las cosas',
-    coverUrl:
-      'https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    type: EArticleType.Post,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    slug: '/posts/internet-of-things',
-    date: 'Diciembre 1, 2021',
-    coverWidth: 1920,
-    coverHeight: 1080,
-    subject: 'Internet de las cosas',
   },
 ]
 

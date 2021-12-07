@@ -1,0 +1,59 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug('/posts/what-is-internet-of-things')
+
+En nuestra vida cotidiana podemos ver una enorme cantidad de
+objetos conectados que forman parte del Internet de las cosas,
+y es que según el Worldwide Global DataSphere IoT Devices and
+Data Forecast para el año 2025 tendremos en torno a 41.600 millones
+de dispositivos conectados. A continuación vamos a poner algunos ejemplos
+para que puedas entender la repercusión de esto:
+
+- Vehículos autónomos: cada vez se habla más de los coches que
+  conducen solos sin que el usuario tenga que hacer nada más allá
+  que decirle dónde quiere ir. Lo que está claro es que los vehículos
+  son cada vez más inteligentes, con pantalla táctil y una enorme cantidad
+  de sensores que facilitan la vida al usuario.
+
+- Robots aspiradora: cuentan con una gran cantidad de
+  sensores que permiten limpiar el suelo de la casa sin
+  chocarse con nada y esquivando obstáculos de manera independiente.
+
+- Smart home: los dispositivos «smart» para los hogares
+  incluyen desde sensores de presencia que encienden luces
+  automáticamente hasta sensores de temperatura o humedad que
+  activan otros aparatos. Incluso los asistentes como Alexa son dispositivos IoT.
+
+![Smart home](https://ekaenlinea.com/wp-content/uploads/2019/02/iot-dlink-mwc-itsitio.png)
+
+Donde el internet de las cosas tendrá todo su potencial será en la
+conducción automática, donde los diferentes vehículos en circulación
+estarán conectados a la red de tráfico a tiempo real para circular en
+cada momento y evitar así accidentes.
+
+Por el momento la cosa está muy verde, pero el mundo de la automoción
+inteligente está creciendo a un nivel exponencial año tras año y no
+queda mucho para que tengamos un entorno basado en el IoT, por el momento
+parece ciencia ficción, pero no hablamos de coches voladores, sino de una
+tecnología totalmente viable.
+
+Son tantas las «cosas» y aplicaciones que tiene este término que por ese
+motivo se ha determinado «Internet de las cosas», pues como hemos dicho
+antes es una especie de ente abstracto complicado de definir con exactitud
+dado que engloba varios elementos al mismo tiempo. Se puede decir que el
+internet de las cosas pese a su nombre no almacena datos y datos de conocimiento
+humano, sino que lo que almacena es el comportamiento humano y la forma
+con la que interactuamos en el día a día, algo que para muchos es algo que
+resulta incómodo y es que de repente tenemos una gran cantidad de ojos y
+orejas escuchándonos para recopilar datos sobre nosotros.
+
+![Ciudad conectada](https://www.muylinux.com/wp-content/uploads/2017/08/IoT.png)
+
+#### Referencias
+
+- [¿Qué es el internet de las cosas y por qué lo llaman así?](https://hardzone.es/reportajes/que-es/internet-cosas-iot/)
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)

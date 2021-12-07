@@ -1,0 +1,77 @@
+import ArticleLayout from '@templates/ArticleLayout'
+import getArticleBySlug from 'utils/common/getArticleBySlug'
+
+export const article = getArticleBySlug(
+  '/posts/advantages-and-disadvantages-of-internet-of-things'
+)
+
+A través de sensores sin intervención humana e IoT aparte de poder
+ser controlado por máquinas, también puede mediar el ser humano y
+combinar con la Inteligencia Artificial.
+
+Se estima que en 2025, el 40% de dicha tecnología se ubique
+en el sector industrial. Su crecimiento cada vez es mayor y
+ya nos ha conquistado en nuestras casas, elementos cotidianos
+o incluso en infraestructuras como pueden ser plantas de producción de energía, etc.
+
+![Tecnología en la industria](https://www.lavanguardia.com/files/image_449_253/uploads/2020/12/16/5fd9fe36a5895.png)
+
+##### Ventajas
+
+- Una mayor eficiencia, productividad e innovación en nuestro negocio
+  con una generación de nuevas ideas.
+
+- Alrededor de 6,5 billones de cosas se encuentran conectadas a
+  Internet, logrando en este 2020 llegar a 50 y 70 billones.
+
+- La comunicación que nos puede ofrecer con el entorno es esencial
+  para nuestro funcionamiento.
+
+- La información está al alcance de cualquier persona en cualquier parte del mundo.
+- Podremos hacer comparaciones desde diversos puntos de vista u opinión.
+
+- Continua actualización diaria.
+
+- Recolección de datos y control de dispositivos.
+
+- Ahorro de tiempo y como bien se dice “el tiempo es oro”.
+  Las actividades pasan a realizarlas máquinas, lo cual es un ahorro importante.
+
+- Mejor toma de decisiones. Esto se debe a la gran cantidad de
+  datos que podemos poseer, por lo que las decisiones serán más idóneas.
+
+- Velocidad en el análisis de datos y facilidad de seguimiento.
+
+![analista programador](https://www.imagar.com/wp-content/uploads/2020/11/analista_programador-scaled.jpg)
+
+##### Desventajas
+
+- La información no se encuentra cifrada, por lo que no se nos ofrece una total seguridad.
+
+- Puede llegar a haber falta de compatibilidad ya que IoT no está estandarizado,
+  debido a que no se está llegando a trabajar del todo con el IEEE.
+
+- Hay que saber qué información es fiable y cuál realmente es de valor.
+
+- El software no es totalmente seguro y puede ser hackeado y el fin que suele
+  tener no es nada bueno.
+
+Para conocer más sobre este tema, el siguiente video puede ser de su agrado:
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/tvNfx2ckr9Y"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+#### Referencias
+
+- [¿Internet de las Cosas? Ventajas y Desventajas](https://www.winecta.com/internet-de-las-cosas-ventajas-desventajas/)
+
+export default ({ children }) => (
+  <ArticleLayout {...article}>{children}</ArticleLayout>
+)
